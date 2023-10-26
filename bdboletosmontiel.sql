@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-10-2023 a las 21:39:05
+-- Tiempo de generación: 26-10-2023 a las 21:10:47
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 5.6.32
 
@@ -55,12 +55,19 @@ CREATE TABLE `pago_boleto` (
   `usuario` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `fecha_pago` date NOT NULL,
-  `num_tarjeta` int(16) NOT NULL,
+  `num_tarjeta` bigint(16) NOT NULL,
   `anio_vence` int(4) NOT NULL,
   `mes_vence` int(2) NOT NULL,
   `codigo_segu` int(3) NOT NULL,
   `tipo_tarjeta` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pago_boleto`
+--
+
+INSERT INTO `pago_boleto` (`id_pago`, `id`, `usuario`, `password`, `fecha_pago`, `num_tarjeta`, `anio_vence`, `mes_vence`, `codigo_segu`, `tipo_tarjeta`) VALUES
+(12, 1, 'nai_monts', '827ccb0eea8a706c4c34a16891f84e7b', '2023-10-24', 4000635682126541, 2025, 10, 123, 'Credito');
 
 -- --------------------------------------------------------
 
